@@ -2,71 +2,76 @@
 
 ## Project Description
 
-This project is a Machine Learning web application that predicts the price of a house using the **Linear Regression** algorithm. Users can enter house details through a web interface, and the application estimates the house price based on the trained model.
+This project is a Machine Learning web application that predicts house prices using the **Linear Regression** algorithm. Users can enter house details through a simple web interface, and the application estimates the house price based on a trained machine learning model.
 
-The project is developed using **Python, Flask, Scikit-Learn, HTML, and CSS**.
+The project is built using **Python, Flask, Scikit-Learn, HTML, and CSS**.
+
+
+## Live Demo
+
+🔗 **Live Application:**
+https://house-price-prediction-778v.onrender.com
+
 
 ## Features
 
-- Predict house prices using Machine Learning
-- Linear Regression model
-- User-friendly web interface
-- Responsive design
-- Input validation
-- Fast prediction
-- Simple and clean UI
-
+* Predict house prices using Machine Learning
+* Linear Regression algorithm
+* User-friendly web interface
+* Responsive design
+* Input validation
+* Fast and accurate prediction
+* Clean and modern UI
 
 ## Technologies Used
 
-- Python
-- Flask
-- Pandas
-- NumPy
-- Scikit-Learn
-- Joblib
-- HTML
-- CSS
+* Python
+* Flask
+* Pandas
+* NumPy
+* Scikit-Learn
+* Joblib
+* HTML
+* CSS
 
 
 ## Machine Learning Model
 
 **Algorithm Used:** Linear Regression
 
-The model is trained using the Housing dataset and predicts house prices based on different house features.
+The model is trained using the **Housing.csv** dataset to predict house prices based on different house features.
 
 
 ## Dataset
 
-Dataset Name: **Housing.csv**
+**Dataset Name:** Housing.csv
 
 ### Input Features
 
-- Area
-- Bedrooms
-- Bathrooms
-- Stories
-- Main Road
-- Guest Room
-- Basement
-- Hot Water Heating
-- Air Conditioning
-- Parking
-- Preferred Area
-- Furnishing Status
+* Area
+* Bedrooms
+* Bathrooms
+* Stories
+* Main Road
+* Guest Room
+* Basement
+* Hot Water Heating
+* Air Conditioning
+* Parking
+* Preferred Area
+* Furnishing Status
 
 ### Target Variable
 
-- Price
+* Price
 
 
 ## Model Evaluation
 
-The model performance is evaluated using:
+The model is evaluated using:
 
-- Mean Squared Error (MSE)
-- R² Score
-
+* Mean Squared Error (MSE)
+* R² Score
 
 ## Project Structure
 
@@ -93,31 +98,38 @@ House_Price_Prediction/
 
 ## Installation
 
-### Install the required libraries
+Install the required libraries:
 
 pip install -r requirements.txt
 
+Run the application:
 
-### Run the application
 
 python app.py
-Then open your browser and visit:
-text
+
+
+Open your browser and visit:
+
 http://127.0.0.1:5000
 
-## How to Use:
+## How to Use
+
 1. Open the application.
 2. Enter the house details.
 3. Click **Predict House Price**.
 4. View the predicted house price.
 
-
 ## Future Improvements
 
-- Improve prediction accuracy
-- Try other regression algorithms
-- Deploy the application online
+* Improve prediction accuracy
+* Try advanced regression algorithms
+* Add more property features
+* Enhance the user interface
 
 ## Author
+
 **Yogesh**
+
+Machine Learning & Python Developer
+
 
