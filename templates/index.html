@@ -1,0 +1,268 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI House Price Prediction</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <!-- Google Icons -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="background-overlay"></div>
+
+<div class="container">
+
+    <div class="logo">
+        <i class="fa-solid fa-house"></i>
+    </div>
+
+    <h1>House Price Prediction</h1>
+
+    <p>
+        Predict the estimated market value of your dream house using
+        <strong>Machine Learning </strong>
+    </p>
+
+    <form action="/predict" method="POST">
+
+        <div class="input-box">
+
+            <label>
+                <i class="fa-solid fa-ruler-combined"></i>
+                Area (Sq Ft)
+            </label>
+
+            <input
+                type="number"
+                name="area"
+                placeholder="1650 - 16200"
+                min="1650"
+                max="16200"
+                required>
+
+        </div>
+
+
+        <div class="input-box">
+
+            <label>
+                <i class="fa-solid fa-bed"></i>
+                Bedrooms
+            </label>
+
+            <input
+                type="number"
+                name="bedrooms"
+                placeholder="1 - 6"
+                min="1"
+                max="6"
+                required>
+
+        </div>
+
+
+        <div class="input-box">
+
+            <label>
+                <i class="fa-solid fa-bath"></i>
+                Bathrooms
+            </label>
+
+            <input
+                type="number"
+                name="bathrooms"
+                placeholder="1 - 4"
+                min="1"
+                max="4"
+                required>
+
+        </div>
+
+
+        <div class="input-box">
+
+            <label>
+                <i class="fa-solid fa-building"></i>
+                Stories
+            </label>
+
+            <input
+                type="number"
+                name="stories"
+                placeholder="1 - 4"
+                min="1"
+                max="4"
+                required>
+
+        </div>
+
+
+        <div class="input-box">
+
+            <label>
+                <i class="fa-solid fa-road"></i>
+                Main Road
+            </label>
+
+            <select name="mainroad">
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+
+        </div>
+
+
+        <div class="input-box">
+
+            <label>
+                <i class="fa-solid fa-door-open"></i>
+                Guest Room
+            </label>
+
+            <select name="guestroom">
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+
+        </div>
+
+
+        <div class="input-box">
+
+            <label>
+                <i class="fa-solid fa-warehouse"></i>
+                Basement
+            </label>
+
+            <select name="basement">
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+
+        </div>
+
+
+        <div class="input-box">
+
+            <label>
+                <i class="fa-solid fa-fire"></i>
+                Hot Water Heating
+            </label>
+
+            <select name="hotwaterheating">
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+
+        </div>
+
+
+        <div class="input-box">
+
+            <label>
+                <i class="fa-solid fa-snowflake"></i>
+                Air Conditioning
+            </label>
+
+            <select name="airconditioning">
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+
+        </div>
+
+
+        <div class="input-box">
+
+            <label>
+                <i class="fa-solid fa-square-parking"></i>
+                Parking
+            </label>
+
+            <input
+                type="number"
+                name="parking"
+                placeholder="0 - 3"
+                min="0"
+                max="3"
+                required>
+
+        </div>
+
+
+        <div class="input-box">
+
+            <label>
+                <i class="fa-solid fa-location-dot"></i>
+                Preferred Area
+            </label>
+
+            <select name="prefarea">
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+
+        </div>
+
+
+        <div class="input-box">
+
+            <label>
+                <i class="fa-solid fa-couch"></i>
+                Furnishing Status
+            </label>
+
+            <select name="furnishingstatus">
+                <option value="0">Furnished</option>
+                <option value="1">Semi-Furnished</option>
+                <option value="2">Unfurnished</option>
+            </select>
+
+        </div>
+
+
+        <button type="submit">
+
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+            Predict House Price
+
+        </button>
+
+    </form>
+
+
+    {% if prediction_text %}
+
+    <div class="result-card">
+
+        <h3>
+
+            <i class="fa-solid fa-sack-dollar"></i>
+
+            Prediction Result
+
+        </h3>
+
+        <h2>{{ prediction_text }}</h2>
+
+    </div>
+
+    {% endif %}
+
+
+</div>
+
+</body>
+</html>
+
